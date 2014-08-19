@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('pifarmAppApp')
+angular.module('pifarm.app')
   .controller('NavbarCtrl', function ($scope, $location) {
     $scope.menu = [{
       'title': 'Home',

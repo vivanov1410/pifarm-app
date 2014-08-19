@@ -1,0 +1,14 @@
+{
+	"folders":
+	[
+		{
+			"path": "/C/Users/sivanova/Documents/GitHub/pifarm-app",
+			"folder_exclude_patterns":
+      [
+        ".sass-cache",
+        ".tmp",
+        "node_modules"
+      ]
+		}
+	]
+}
