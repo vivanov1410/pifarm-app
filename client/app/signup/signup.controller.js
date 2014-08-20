@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('pifarm.app')
-.controller('SignupCtrl', function ($scope) {
+.controller('SignupCtrl',
+['$scope', 'Settings',
+function ($scope, Settings) {
   
-  $scope.message = 'Hello';
+  $scope.currentYear = Settings.currentYear;
 
-});
+}]);

@@ -4,17 +4,21 @@ var should = require('should');
 var app = require('../../app');
 var request = require('supertest');
 
-describe('GET /api/signup', function() {
+describe('POST /api/signup', function() {
 
-  it('should respond with JSON array', function(done) {
+  it('should respond with account object on success', function(done) {
     request(app)
-      .get('/api/signup')
-      .expect(200)
+      .post('/api/signup')
+      .expect(201)
       .expect('Content-Type', /json/)
       .end(function(err, res) {
         if (err) return done(err);
-        res.body.should.be.instanceof(Array);
+        
+        var account = res.body;
+        account.should.have.property(username);
+        account.should.have.property(sessionToken);
         done();
       });
   });
+
 });

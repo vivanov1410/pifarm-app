@@ -5,6 +5,6 @@ var controller = require('./signup.controller');
 
 var router = express.Router();
 
-router.get('/', controller.index);
+router.post('/', controller.signup);
 
 module.exports = router;

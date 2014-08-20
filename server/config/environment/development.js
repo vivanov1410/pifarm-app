@@ -8,7 +8,7 @@ var api = {
   version: 'v1'
 };
 
-api.url = api.protocol + '://' + api.hostname '/' + api.version; 
+api.url = api.protocol + '://' + api.hostname + '/' + api.version; 
 
 module.exports = {
   

@@ -5,6 +5,7 @@
 'use strict';
 
 var errors = require('./components/errors');
+var config = require('./config/environment');
 
 module.exports = function(app) {
 
@@ -18,6 +19,9 @@ module.exports = function(app) {
   // All other routes should redirect to the index.html
   app.route('/*')
     .get(function(req, res) {
-      res.sendfile(app.get('appPath') + '/index.html');
+      res.render('index', {
+        currentYear: new Date().getFullYear(),
+        apiUrl: config.api.url
+      });
     });
 };
