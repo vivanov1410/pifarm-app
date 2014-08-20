@@ -2,11 +2,16 @@
 
 // Development specific configuration
 // ==================================
-module.exports = {
-  // MongoDB connection options
-  mongo: {
-    uri: 'mongodb://localhost/pifarmapp-dev'
-  },
+var api = {
+  protocol: 'http',
+  hostname: 'http://pifarm.apphb.com',
+  version: 'v1'
+};
 
-  seedDB: true
+api.url = api.protocol + '://' + api.hostname '/' + api.version; 
+
+module.exports = {
+  
+  api: api
+
 };
