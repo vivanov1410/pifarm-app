@@ -12,7 +12,9 @@ exports.signup = function (req, res) {
   };
 
   // TODO: add proper error logging
+  // TODO: add error handling
   var signupUrl = config.api.url + '/auth/signup';
+  console.log(signupUrl);
   unirest.post(signupUrl)
     .headers({ 'Accept': 'application/json' })
     .send(data)
