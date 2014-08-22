@@ -4,6 +4,7 @@
 		"selected_items":
 		[
 			[
+<<<<<<< HEAD
 				"mar",
 				"margin"
 			],
@@ -14,6 +15,14 @@
 			[
 				"u",
 				"urlRouterProvider"
+=======
+				"log",
+				"loginUrl"
+			],
+			[
+				"sign",
+				"signupUrl"
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 			],
 			[
 				"tab",
@@ -84,22 +93,37 @@
 	"buffers":
 	[
 		{
+<<<<<<< HEAD
 			"file": "client/app/signup/signup.html",
 			"settings":
 			{
 				"buffer_size": 745,
+=======
+			"file": "server/api/signup/signup.controller.js",
+			"settings":
+			{
+				"buffer_size": 680,
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 				"line_ending": "Unix"
 			}
 		},
 		{
+<<<<<<< HEAD
 			"file": "client/app/signup/signup.scss",
 			"settings":
 			{
 				"buffer_size": 144,
+=======
+			"file": "server/routes.js",
+			"settings":
+			{
+				"buffer_size": 685,
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 				"line_ending": "Windows"
 			}
 		},
 		{
+<<<<<<< HEAD
 			"file": "client/app/app.scss",
 			"settings":
 			{
@@ -112,6 +136,12 @@
 			"settings":
 			{
 				"buffer_size": 3096,
+=======
+			"file": "server/api/signup/index.js",
+			"settings":
+			{
+				"buffer_size": 193,
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 				"line_ending": "Unix"
 			}
 		}
@@ -148,12 +178,29 @@
 	},
 	"file_history":
 	[
+<<<<<<< HEAD
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/components/navbar/navbar.html",
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/index.html",
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/signup/signup.scss",
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/signup/signup.controller.spec.js",
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/signup/signup.controller.js",
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/signup/signup.js",
+=======
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/config/environment/development.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/api/login/index.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/api/login/login.controller.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/api/signup/signup.controller.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/routes.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/api/signup/signup.spec.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/api/signup/index.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/views/index.html",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/client/app/signup/signup.html",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/client/app/signup/signup.controller.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/client/app/app.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/.gitignore",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/project.sublime-project",
+		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/main/main.js",
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/app.js",
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/components/navbar/navbar.controller.js",
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/project.sublime-project",
@@ -202,7 +249,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+<<<<<<< HEAD
 			"pifarmAppApp",
+=======
+			"project",
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 			"helpde",
 			".banner-guide:hover",
 			"col-sm-3-guide",
@@ -246,28 +297,48 @@
 	"groups":
 	[
 		{
+<<<<<<< HEAD
 			"selected": 0,
+=======
+			"selected": 1,
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 			"sheets":
 			[
 				{
 					"buffer": 0,
+<<<<<<< HEAD
 					"file": "client/app/signup/signup.html",
 					"settings":
 					{
 						"buffer_size": 745,
+=======
+					"file": "server/api/signup/signup.controller.js",
+					"settings":
+					{
+						"buffer_size": 680,
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								720,
 								720
+=======
+								394,
+								394
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 							]
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/HTML/HTML.tmLanguage",
+=======
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -279,23 +350,41 @@
 				},
 				{
 					"buffer": 1,
+<<<<<<< HEAD
 					"file": "client/app/signup/signup.scss",
 					"settings":
 					{
 						"buffer_size": 144,
+=======
+					"file": "server/routes.js",
+					"settings":
+					{
+						"buffer_size": 685,
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								38,
 								44
+=======
+								267,
+								267
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 							]
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+=======
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -305,6 +394,7 @@
 				},
 				{
 					"buffer": 2,
+<<<<<<< HEAD
 					"file": "client/app/app.scss",
 					"settings":
 					{
@@ -335,6 +425,12 @@
 					"settings":
 					{
 						"buffer_size": 3096,
+=======
+					"file": "server/api/signup/index.js",
+					"settings":
+					{
+						"buffer_size": 193,
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 						"regions":
 						{
 						},
@@ -347,9 +443,13 @@
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
+=======
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -402,6 +502,7 @@
 		"selected_items":
 		[
 			[
+<<<<<<< HEAD
 				"inde",
 				"client/index.html"
 			],
@@ -412,6 +513,18 @@
 			[
 				"nav",
 				"client/components/navbar/navbar.html"
+=======
+				"app",
+				"client/app/app.js"
+			],
+			[
+				"signup.con",
+				"client/app/signup/signup.controller.js"
+			],
+			[
+				"sign",
+				"client/app/signup/signup.html"
+>>>>>>> f2a696c9103e3ab7dc708844d2c49ec053468e94
 			]
 		],
 		"width": 0.0

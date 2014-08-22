@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('pifarm.app', [
+  'pifarm.settings',
   'ngCookies',
   'ngResource',
   'ngSanitize',
