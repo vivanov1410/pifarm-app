@@ -534,11 +534,8 @@ module.exports = function (grunt) {
     if (target === 'debug') {
       return grunt.task.run([
         'clean:server',
-        'env:all',
-        'injector:sass', 
+        'env:all', 
         'concurrent:server',
-        'injector',
-        'bowerInstall',
         'autoprefixer',
         'concurrent:debug'
       ]);
@@ -547,10 +544,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'env:all',
-      'injector:sass', 
       'concurrent:server',
-      'injector',
-      'bowerInstall',
       'autoprefixer',
       'express:dev',
       'wait',
@@ -577,9 +571,7 @@ module.exports = function (grunt) {
       return grunt.task.run([
         'clean:server',
         'env:all',
-        'injector:sass', 
         'concurrent:test',
-        'injector',
         'autoprefixer',
         'karma'
       ]);
@@ -590,10 +582,7 @@ module.exports = function (grunt) {
         'clean:server',
         'env:all',
         'env:test',
-        'injector:sass', 
         'concurrent:test',
-        'injector',
-        'bowerInstall',
         'autoprefixer',
         'express:dev',
         'protractor'
@@ -608,10 +597,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'injector:sass', 
     'concurrent:dist',
-    'injector',
-    'bowerInstall',
     'useminPrepare',
     'autoprefixer',
     'ngtemplates',

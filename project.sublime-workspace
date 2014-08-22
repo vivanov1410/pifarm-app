@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"log",
+				"loginUrl"
+			],
+			[
+				"sign",
+				"signupUrl"
+			],
+			[
 				"tab",
 				"tab-content"
 			],
@@ -79,6 +87,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "server/api/signup/signup.controller.js",
+			"settings":
+			{
+				"buffer_size": 680,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/routes.js",
+			"settings":
+			{
+				"buffer_size": 685,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/api/signup/index.js",
+			"settings":
+			{
+				"buffer_size": 193,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -104,6 +136,19 @@
 	},
 	"file_history":
 	[
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/config/environment/development.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/api/login/index.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/api/login/login.controller.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/api/signup/signup.controller.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/routes.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/api/signup/signup.spec.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/api/signup/index.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/server/views/index.html",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/client/app/signup/signup.html",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/client/app/signup/signup.controller.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/client/app/app.js",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/.gitignore",
+		"/C/Users/vivanov/repos/pifarm/pifarm-app/project.sublime-project",
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/main/main.js",
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/app.js",
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/main/main.controller.js",
@@ -152,6 +197,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"project",
 			"helpde",
 			".banner-guide:hover",
 			"col-sm-3-guide",
@@ -195,13 +241,91 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
-			]
-		},
-		{
-			"sheets":
-			[
+				{
+					"buffer": 0,
+					"file": "server/api/signup/signup.controller.js",
+					"settings":
+					{
+						"buffer_size": 680,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								394,
+								394
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "server/routes.js",
+					"settings":
+					{
+						"buffer_size": 685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								267,
+								267
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "server/api/signup/index.js",
+					"settings":
+					{
+						"buffer_size": 193,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -222,18 +346,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -253,6 +370,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"app",
+				"client/app/app.js"
+			],
+			[
+				"signup.con",
+				"client/app/signup/signup.controller.js"
+			],
+			[
+				"sign",
+				"client/app/signup/signup.html"
+			]
 		],
 		"width": 0.0
 	},
