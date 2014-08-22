@@ -3,7 +3,7 @@
 var unirest = require('unirest');
 var config = require('../../config/environment');
 
-exports.login = function(req, res) {
+exports.index = function(req, res) {
   // TODO: add validation
   var data = {
     username: req.body.username,

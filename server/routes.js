@@ -10,6 +10,7 @@ var config = require('./config/environment');
 module.exports = function(app) {
 
   // Insert routes below
+  app.use('/api/settings', require('./api/settings'));
   app.use('/api/login', require('./api/login'));
   app.use('/api/signup', require('./api/signup'));
   
@@ -20,9 +21,6 @@ module.exports = function(app) {
   // All other routes should redirect to the index.html
   app.route('/*')
     .get(function(req, res) {
-      res.render('index', {
-        currentYear: new Date().getFullYear(),
-        apiUrl: config.api.url
-      });
+      res.sendfile(app.get('appPath') + '/index.html');
     });
 };

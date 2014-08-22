@@ -19,7 +19,7 @@
       <link rel="stylesheet" href="app/app.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="pifarm.app">
+  <body>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -45,17 +45,25 @@
     <!-- endbuild -->
 
     <!-- build:js({.tmp,client}) app/app.js -->
-    <script src="app/app.js"></script>
-      <script src="app/signup/signup.zcontroller.js"></script>
+      <script src="app/app.js"></script>
+      <script src="app/signup/signup.controller.js"></script>
       <script src="components/navbar/navbar.controller.js"></script>
     <!-- endbuild -->
 
     <script>
-      angular.module('pifarm.settings', []);
-      angular.module('pifarm.settings').constant('Settings', {
-        currentYear: '<%= currentYear %>',
-        apiUrl: '<%= apiUrl %>'
-      }); 
+      (function() {
+        var initInjector = angular.injector(['ng']);
+        var $http = initInjector.get('$http');
+        $http.get('/api/settings').then(
+          function (response) {
+            angular.module('pifarm.settings', []).constant('Settings', response.data);
+
+            angular.element(document).ready(function() {
+              angular.bootstrap(document, ['pifarm.app']);
+            });
+          }
+        );
+      })();
     </script>
 </body>
 </html>
