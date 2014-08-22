@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"u",
+				"urlRouterProvider"
+			],
+			[
 				"tab",
 				"tab-content"
 			],
@@ -32,10 +44,6 @@
 				"background"
 			],
 			[
-				"mar",
-				"margin-right"
-			],
-			[
 				"bor",
 				"border"
 			],
@@ -54,10 +62,6 @@
 			[
 				"di",
 				"display"
-			],
-			[
-				"pad",
-				"padding-left"
 			],
 			[
 				"back",
@@ -79,15 +83,55 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "client/app/signup/signup.html",
+			"settings":
+			{
+				"buffer_size": 745,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/signup/signup.scss",
+			"settings":
+			{
+				"buffer_size": 144,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/app/app.scss",
+			"settings":
+			{
+				"buffer_size": 494,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/index.html",
+			"settings":
+			{
+				"buffer_size": 3096,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 265.0,
+		"height": 58.0,
 		"selected_items":
 		[
+			[
+				"ss scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
 		],
-		"width": 504.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -104,14 +148,19 @@
 	},
 	"file_history":
 	[
-		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/main/main.js",
+		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/components/navbar/navbar.html",
+		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/index.html",
+		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/signup/signup.scss",
+		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/signup/signup.controller.spec.js",
+		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/signup/signup.controller.js",
+		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/signup/signup.js",
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/app.js",
-		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/main/main.controller.js",
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/components/navbar/navbar.controller.js",
+		"/C/Users/sivanova/Documents/GitHub/pifarm-app/project.sublime-project",
+		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/main/main.js",
+		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/main/main.controller.js",
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/login/login.html",
 		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/app/login/login.controller.js",
-		"/C/Users/sivanova/Documents/GitHub/pifarm-app/client/index.html",
-		"/C/Users/sivanova/Documents/GitHub/pifarm-app/project.sublime-project",
 		"/C/Users/sivanova/Dropbox/Public/FYi stafftraining/banners/new-tile-for-helpdesk/index.html",
 		"/C/Users/sivanova/AppData/Local/Temp/Temp1_icomoon (3).zip/style.css",
 		"/C/Users/sivanova/AppData/Local/Temp/Temp1_icomoon (3).zip/demo.html",
@@ -145,6 +194,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"C:\\Users\\sivanova\\Documents\\GitHub\\pifarm-app\\client"
 		]
 	},
 	"find_state":
@@ -152,6 +202,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pifarmAppApp",
 			"helpde",
 			".banner-guide:hover",
 			"col-sm-3-guide",
@@ -195,13 +246,117 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
-			]
-		},
-		{
-			"sheets":
-			[
+				{
+					"buffer": 0,
+					"file": "client/app/signup/signup.html",
+					"settings":
+					{
+						"buffer_size": 745,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								720,
+								720
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/app/signup/signup.scss",
+					"settings":
+					{
+						"buffer_size": 144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								38,
+								44
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/app/app.scss",
+					"settings":
+					{
+						"buffer_size": 494,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								303,
+								303
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/index.html",
+					"settings":
+					{
+						"buffer_size": 3096,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -222,18 +377,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -253,6 +401,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"inde",
+				"client/index.html"
+			],
+			[
+				"app",
+				"client/app/app.scss"
+			],
+			[
+				"nav",
+				"client/components/navbar/navbar.html"
+			]
 		],
 		"width": 0.0
 	},
