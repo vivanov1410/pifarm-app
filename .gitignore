@@ -5,5 +5,13 @@ public
 client/bower_components
 dist
 /server/config/local.env.js
-project.sublime-project
-project.sublime-workspace
+
+# workspace files are user-specific
+*.sublime-workspace
+
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+# *.sublime-project
+
+#sftp configuration file
+sftp-config.json
