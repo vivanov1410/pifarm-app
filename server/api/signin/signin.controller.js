@@ -11,11 +11,12 @@ exports.index = function(req, res) {
   };
 
   // TODO: add proper error logging
-  var loginUrl = config.api.url + '/auth/login';
-  unirest.post(loginUrl)
+  var signinUrl = config.api.url + '/auth/login';
+  unirest.post(signinUrl)
     .headers({ 'Accept': 'application/json' })
     .send(data)
     .end(function (response) {
+      console.log(response.code)
       // TODO: remove magic strings
       if(response.ok) {
         res.json(response.body);

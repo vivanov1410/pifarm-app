@@ -6,6 +6,7 @@ var config = require('../../config/environment');
 exports.index = function(req, res) {
   res.json({
     currentYear: new Date().getFullYear(),
-    apiUrl: config.api.url
+    apiUrl: config.api.url,
+    tokenName: 'pifarm.token'
   });
 };

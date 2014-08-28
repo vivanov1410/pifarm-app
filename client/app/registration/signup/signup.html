@@ -1,0 +1,24 @@
+<div class="row signup-form-align">
+  <div class="col-md-12">
+    <div class="signup-header">
+      <h1 class=""><strong>Create Account</strong>
+        <a href="/signin" class="pull-right">Sign in</a>
+      </h1> 
+    </div>
+
+    <div class="signup-box">
+      <form name="signupForm" class="signup-form-content" role="form" ng-submit="signup(account, signupForm)">
+        <div class="form-group">
+          <input type="text" name="fullName" class="form-control input-lg" placeholder="Full name" ng-model="account.fullName" required ng-minlength="4" ng-maxlength="64" autofocus>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" class="form-control input-lg" placeholder="Email" ng-model="account.email" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" class="form-control input-lg" placeholder="Password" ng-model="account.password" required ng-minlength="8">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" ng-disabled="loading">{{signupButtonText || 'Sign Up'}}</button>
+      </form>
+    </div>
+  </div>
+</div>

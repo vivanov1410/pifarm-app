@@ -4,7 +4,7 @@
 // ==================================
 var api = {
   protocol: 'http',
-  hostname: 'pifarm.apphb.com',
+  hostname: 'localhost:54627',
   version: 'v1'
 };
 

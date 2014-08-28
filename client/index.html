@@ -42,22 +42,37 @@
       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/restangular/src/restangular.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,client}) app/app.js -->
       <script src="app/app.js"></script>
-      <script src="app/signup/signup.controller.js"></script>
+      <script src="app/registration/registration.js"></script>
+      <script src="app/registration/registration.controller.js"></script>
+      <script src="app/registration/signin/signin.controller.js"></script>
+      <script src="app/registration/signup/signup.controller.js"></script>
+      <script src="app/registration/forgot/forgot.controller.js"></script>
+
+      <script src="app/main/main.js"></script>
+      <script src="app/main/main.controller.js"></script>
+      <script src="app/main/dashboard/dashboard.controller.js"></script>
+
       <script src="components/navbar/navbar.controller.js"></script>
+
+      <script src="components/auth/auth.service.js"></script>
+      <script src="components/accounts/accounts.service.js"></script>
     <!-- endbuild -->
 
     <script>
       (function() {
+        // Loading settings from server first
         var initInjector = angular.injector(['ng']);
         var $http = initInjector.get('$http');
         $http.get('/api/settings').then(
           function (response) {
             angular.module('pifarm.settings', []).constant('Settings', response.data);
 
+            // Bootstrapping angular manualy with settings loaded
             angular.element(document).ready(function() {
               angular.bootstrap(document, ['pifarm.app']);
             });

@@ -1,0 +1,16 @@
+<div class="content">
+  <form class="login-form" name="forgotForm" ng-submit="remember(email, forgotForm)">
+    <h3 >Forgot Password?</h3>
+    <p>Enter your e-mail address below to reset your password.</p>
+    <div class="form-group">
+      <div class="input-icon">
+        <i class="fa fa-envelope"></i>
+        <input class="form-control placeholder-no-fix" type="email" autocomplete="off" placeholder="Email" autofocus required ng-model="email">
+      </div>
+    </div>
+    <div class="form-actions">
+      <a ng-href="{{from}}" class="btn btn-link">Nevermind</a>
+      <button type="submit" class="btn btn-success pull-right" ng-disabled="forgotForm.$invalid">Reset</button>            
+    </div>
+  </form>
+</div>
