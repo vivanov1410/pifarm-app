@@ -13,13 +13,88 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
  */
 
 .pi-wrapper {
- 	background-color: $bg-color;
- }
-
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+	background-color: $bg-color;
 }
 
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+// Component styles are injected through grunt
+// injector
+@import 'registration/signin/signin.scss';
+@import 'registration/signup/signup.scss';
+@import 'signup/signup.scss';
+@import 'styles/_alerts.scss';
+@import 'styles/_badges.scss';
+@import 'styles/_breadcrumbs.scss';
+@import 'styles/_button-groups.scss';
+@import 'styles/_buttons.scss';
+@import 'styles/_carousel.scss';
+@import 'styles/_close.scss';
+@import 'styles/_code.scss';
+@import 'styles/_component-animations.scss';
+@import 'styles/_dropdowns.scss';
+@import 'styles/_forms.scss';
+@import 'styles/_glyphicons.scss';
+@import 'styles/_grid.scss';
+@import 'styles/_input-groups.scss';
+@import 'styles/_jumbotron.scss';
+@import 'styles/_labels.scss';
+@import 'styles/_list-group.scss';
+@import 'styles/_media.scss';
+@import 'styles/_mixins.scss';
+@import 'styles/_modals.scss';
+@import 'styles/_navbar.scss';
+@import 'styles/_navs.scss';
+@import 'styles/_normalize.scss';
+@import 'styles/_pager.scss';
+@import 'styles/_pagination.scss';
+@import 'styles/_panels.scss';
+@import 'styles/_popovers.scss';
+@import 'styles/_print.scss';
+@import 'styles/_progress-bars.scss';
+@import 'styles/_responsive-embed.scss';
+@import 'styles/_responsive-utilities.scss';
+@import 'styles/_scaffolding.scss';
+@import 'styles/_tables.scss';
+@import 'styles/_theme.scss';
+@import 'styles/_thumbnails.scss';
+@import 'styles/_tooltip.scss';
+@import 'styles/_type.scss';
+@import 'styles/_utilities.scss';
+@import 'styles/_variables.scss';
+@import 'styles/_wells.scss';
+@import 'styles/bootstrap.scss';
+@import 'styles/mixins/_alerts.scss';
+@import 'styles/mixins/_background-variant.scss';
+@import 'styles/mixins/_border-radius.scss';
+@import 'styles/mixins/_buttons.scss';
+@import 'styles/mixins/_center-block.scss';
+@import 'styles/mixins/_clearfix.scss';
+@import 'styles/mixins/_forms.scss';
+@import 'styles/mixins/_gradients.scss';
+@import 'styles/mixins/_grid-framework.scss';
+@import 'styles/mixins/_grid.scss';
+@import 'styles/mixins/_hide-text.scss';
+@import 'styles/mixins/_image.scss';
+@import 'styles/mixins/_labels.scss';
+@import 'styles/mixins/_list-group.scss';
+@import 'styles/mixins/_nav-divider.scss';
+@import 'styles/mixins/_nav-vertical-align.scss';
+@import 'styles/mixins/_opacity.scss';
+@import 'styles/mixins/_pagination.scss';
+@import 'styles/mixins/_panels.scss';
+@import 'styles/mixins/_progress-bar.scss';
+@import 'styles/mixins/_reset-filter.scss';
+@import 'styles/mixins/_resize.scss';
+@import 'styles/mixins/_responsive-visibility.scss';
+@import 'styles/mixins/_size.scss';
+@import 'styles/mixins/_tab-focus.scss';
+@import 'styles/mixins/_table-row.scss';
+@import 'styles/mixins/_text-emphasis.scss';
+@import 'styles/mixins/_text-overflow.scss';
+@import 'styles/mixins/_vendor-prefixes.scss';

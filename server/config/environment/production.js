@@ -2,6 +2,14 @@
 
 // Production specific configuration
 // =================================
+var api = {
+  protocol: 'http',
+  hostname: 'pifarm.apphb.com',
+  version: 'v1'
+};
+
+api.url = api.protocol + '://' + api.hostname + '/' + api.version; 
+
 module.exports = {
   // Server IP
   ip:       process.env.OPENSHIFT_NODEJS_IP ||
@@ -13,11 +21,6 @@ module.exports = {
             process.env.PORT ||
             8080,
 
-  // MongoDB connection options
-  mongo: {
-    uri:    process.env.MONGOLAB_URI ||
-            process.env.MONGOHQ_URL ||
-            process.env.OPENSHIFT_MONGODB_DB_URL+process.env.OPENSHIFT_APP_NAME ||
-            'mongodb://localhost/pifarmapp'
-  }
+  api:      api
+
 };
