@@ -65,11 +65,8 @@ function ($q, $http, $cookieStore, Restangular, Settings, Accounts) {
         password: account.password
       })
       .success(function (data) {
-        var token = data.sessionToken;
-        $cookieStore.put(tokenName, token);
-        currentAccount = Accounts.me();
-        deferred.resolve();
-        return callback();
+        deferred.resolve(data);
+        return callback(data);
       })
       .error(function (err) {
         this.logout();

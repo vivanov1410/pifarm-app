@@ -1,30 +1,41 @@
-<div class="row signup-form-align">
+<div class="row page-signup">
   <div class="col-md-12">
-    <div class="signup-circle">
+    <div class="signup-logo">
       <div class="text-center">
         <img src="/assets/images/pi-logo.png" alt="Pifarm Logo">
       </div>
     </div>
 
     <div class="signup-header">
-      <h1 class=""><strong>Create Account</strong>
-        <a href="/signin" class="pull-right">Sign in</a>
+      <h1 class="">
+        Create Account
+        <a href="/signin" class="pull-right">Sign In</a>
       </h1> 
     </div>
 
     <div class="signup-box">
-      <form name="signupForm" class="signup-content-content" role="form" ng-submit="signup(account, signupForm)">
-        <div class="form-group">
+      <form name="form" role="form" ng-submit="signup(account, form)">
+        <div class="form-group" ng-class="{'has-error': form.fullName.$invalid && form.fullName.$dirty}">
           <input type="text" name="fullName" class="form-control input-lg" placeholder="Full name" ng-model="account.fullName" required ng-minlength="4" ng-maxlength="64" autofocus>
+          <span class="help-block" ng-if="form.fullName.$error.minlength">Name is too short.</span>
+          <span class="help-block" ng-if="form.fullName.$error.maxlength">Name is too long.</span>
         </div>
-        <div class="form-group">
+
+        <div class="form-group" ng-class="{'has-error': form.email.$invalid && form.email.$dirty || duplicateEmailError}">
           <input type="email" name="email" class="form-control input-lg" placeholder="Email" ng-model="account.email" required>
+          <span class="help-block" ng-if="duplicateEmailError">Account with this email already exists.</span>
         </div>
-        <div class="form-group">
+
+        <div class="form-group" ng-class="{'has-error': form.password.$invalid && form.password.$dirty}">
           <input type="password" name="password" class="form-control input-lg" placeholder="Password" ng-model="account.password" required ng-minlength="8">
+          <span class="help-block" ng-if="form.password.$error.minlength">Password should more than 8 characters.</span>
         </div>
-        <button type="submit" class="btn btn-primary btn-lg btn-block" ng-disabled="loading">{{signupButtonText || 'Sign Up'}}</button>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" ng-disabled="form.$invalid || loading">{{signupButtonText || 'Sign Up'}}</button>
       </form>
     </div>
   </div>
 </div>
+
+<growl-notification class="error fading" ng-if="serverError">
+  Server Error. Ops, our servers are freaking out! Please try again.
+</growl-notification>

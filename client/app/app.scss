@@ -6,11 +6,56 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 
 // Core variables and mixins
 @import '../components/styles/bootstrap';
-@import 'signup/signup.scss';
 
 /**
  * App-wide Styles
  */
+
+growl-notifications {
+  position: fixed;
+  top: 150px;
+  right: 10px;
+  z-index: 1000;
+}
+
+growl-notifications growl-notification:first-child {
+  margin-top: 0;
+}
+
+growl-notifications growl-notification {
+  display: block;
+  margin-top: 15px;
+  padding: 15px 30px;
+  width: 200px;
+  background: white;
+  border: 1px solid #eeeeee;
+  border-left-width: 5px;
+  border-left-color: #f0ad4e;
+  border-radius: 3px;
+
+  &.error {
+    border-left-color: #d9534f;
+  }
+}
+
+growl-notification.fading.ng-move{
+  opacity: 0;
+  -webkit-transition: 1s linear all; /* Safari/Chrome */
+  transition: 1s linear all; /* All other modern browsers and IE10+ */
+}
+
+growl-notification.fading.ng-move.ng-move-active {
+  opacity: 1;
+}
+growl-notification.fading.ng-leave {
+  opacity: 1;
+  -webkit-transition: 1s linear all; /* Safari/Chrome */
+  transition: 1s linear all; /* All other modern browsers and IE10+ */
+}
+
+growl-notification.fading.ng-leave.ng-leave-active {
+  opacity: 0;
+}
 
 .pi-wrapper {
 	background-color: $bg-color;
@@ -24,10 +69,8 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 }
 
 // Component styles are injected through grunt
-// injector
 @import 'registration/signin/signin.scss';
 @import 'registration/signup/signup.scss';
-@import 'signup/signup.scss';
 @import 'styles/_alerts.scss';
 @import 'styles/_badges.scss';
 @import 'styles/_breadcrumbs.scss';

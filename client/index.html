@@ -23,6 +23,9 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    
+    <growl-notifications>
+    </growl-notifications>
 
     <!-- Add your site or application content here -->
     <div class="container" ui-view=""></div>
@@ -39,10 +42,12 @@
       <script src="bower_components/angular-resource/angular-resource.js"></script>
       <script src="bower_components/angular-cookies/angular-cookies.js"></script>
       <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+      <script src="bower_components/angular-animate/angular-animate.js"></script>
       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
       <script src="bower_components/restangular/src/restangular.js"></script>
+      <script src="bower_components/angular-growl-notifications/dist/angular-growl-notifications.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,client}) app/app.js -->
@@ -61,6 +66,8 @@
 
       <script src="components/auth/auth.service.js"></script>
       <script src="components/accounts/accounts.service.js"></script>
+
+      <script src="components/inspector/inspector.service.js"></script>
     <!-- endbuild -->
 
     <script>

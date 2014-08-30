@@ -12,18 +12,23 @@ exports.index = function (req, res) {
   };
 
   // TODO: add proper error logging
-  // TODO: add error handling
   var signupUrl = config.api.url + '/auth/signup';
   unirest.post(signupUrl)
     .headers({ 'Accept': 'application/json' })
     .send(data)
     .end(function (response) {
-      // TODO: remove magic strings
-      if(response.code === 201) {
-        res.json(response.body);
+      console.log(response.error)
+      if(response.error) {
+        if(response.error.code === 'ECONNREFUSED') {
+          console.error('Connection to Pifarm API server is not available');
+          return res.send(500);
+        }
+        else {
+          return res.send(response.code, response.body);
+        }
       }
-      else {
-        res.send(401);
-      }
+      
+      console.log('sending body');
+      res.json(response.body);
     });
 };

@@ -5,9 +5,11 @@ angular.module('pifarm.app', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
+  'ngAnimate',
   'ui.router',
   'ui.bootstrap',
-  'restangular'
+  'restangular',
+  'growlNotifications'
 ])
 .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
   
