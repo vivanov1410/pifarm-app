@@ -27,6 +27,8 @@
     <growl-notifications>
     </growl-notifications>
 
+    <div ng-include="'components/notifier/notifier.html'"></div>
+
     <!-- Add your site or application content here -->
     <div class="container" ui-view=""></div>
 
@@ -68,6 +70,8 @@
       <script src="components/accounts/accounts.service.js"></script>
 
       <script src="components/inspector/inspector.service.js"></script>
+      <script src="components/notifier/notifier.controller.js"></script>
+      <script src="components/notifier/notifier.service.js"></script>
     <!-- endbuild -->
 
     <script>

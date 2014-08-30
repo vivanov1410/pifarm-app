@@ -26,9 +26,9 @@ function ($q, $http, $cookieStore, Restangular, Settings, Accounts) {
       .success(function (data) {
         var token = data.sessionToken;
         $cookieStore.put(tokenName, token);
-        currentAccount = Accounts.me();
-        deferred.resolve();
-        return callback();
+        currentAccount = data;
+        deferred.resolve(data);
+        return callback(data);
       })
       .error(function (err) {
         this.logout();

@@ -13,6 +13,10 @@ angular.module('pifarm.app')
       return err.type === 'ApiError';
     },
 
+    unauthorized: function (err) {
+      return err === 'Unauthorized';
+    },
+
     account: {
       duplicate: function (err) {
         return err.code === 'AccountDuplicate';

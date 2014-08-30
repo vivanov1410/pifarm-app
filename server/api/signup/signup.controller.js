@@ -17,8 +17,10 @@ exports.index = function (req, res) {
     .headers({ 'Accept': 'application/json' })
     .send(data)
     .end(function (response) {
-      console.log(response.error)
-      if(response.error) {
+      if(response.status === 201) {
+        res.json(response.body);
+      }
+      else {
         if(response.error.code === 'ECONNREFUSED') {
           console.error('Connection to Pifarm API server is not available');
           return res.send(500);
@@ -27,8 +29,5 @@ exports.index = function (req, res) {
           return res.send(response.code, response.body);
         }
       }
-      
-      console.log('sending body');
-      res.json(response.body);
     });
 };

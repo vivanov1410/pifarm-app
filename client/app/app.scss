@@ -69,8 +69,7 @@ growl-notification.fading.ng-leave.ng-leave-active {
 }
 
 // Component styles are injected through grunt
-@import 'registration/signin/signin.scss';
-@import 'registration/signup/signup.scss';
+@import 'registration/registration.scss';
 @import 'styles/_alerts.scss';
 @import 'styles/_badges.scss';
 @import 'styles/_breadcrumbs.scss';

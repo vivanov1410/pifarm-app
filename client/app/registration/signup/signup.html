@@ -1,19 +1,14 @@
-<div class="row page-signup">
+<div class="row page-registration">
   <div class="col-md-12">
-    <div class="signup-logo">
-      <div class="text-center">
-        <img src="/assets/images/pi-logo.png" alt="Pifarm Logo">
-      </div>
-    </div>
 
-    <div class="signup-header">
+    <div class="registration-header">
       <h1 class="">
         Create Account
         <a href="/signin" class="pull-right">Sign In</a>
       </h1> 
     </div>
 
-    <div class="signup-box">
+    <div class="registration-box">
       <form name="form" role="form" ng-submit="signup(account, form)">
         <div class="form-group" ng-class="{'has-error': form.fullName.$invalid && form.fullName.$dirty}">
           <input type="text" name="fullName" class="form-control input-lg" placeholder="Full name" ng-model="account.fullName" required ng-minlength="4" ng-maxlength="64" autofocus>

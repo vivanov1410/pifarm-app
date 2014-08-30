@@ -1,17 +1,16 @@
 'use strict';
 
 angular.module('pifarm.app')
-.controller('SigninCtrl', function ($scope, $location, $window, Auth) {
+.controller('SigninCtrl', function ($scope, $log, $location, $window, Auth, Inspector, Notifier) {
 
   $window.document.title = 'Sign In | Pifarm';
 
-  $scope.credentials = {};
+  $scope.credentials = {
+    username: 'test@test.test',
+    password: 'testishe'
+  };
   $scope.loading = false;
   $scope.error = false;
-
-  $scope.resetErrors = function () {
-    $scope.error = false;
-  };
 
   $scope.startLoading = function () {
     $scope.loading = true;
@@ -23,22 +22,37 @@ angular.module('pifarm.app')
     $scope.loginButtonText = 'Login';
   };
 
+  $scope.resetErrors = function () {
+    $scope.error = false;
+  };
+
+  $scope.handleError = function (err) {
+    $scope.stopLoading();
+    $scope.credentials.password = '';
+    if(Inspector.unauthorized(err)) {
+      $scope.error = true;
+    }
+    else {
+      $log.error(err);
+      Notifier.serverError();
+    }
+  }
+
   $scope.signin = function (credentials, form) {
     $scope.resetErrors();
 
     if(form.$valid) {
+      if(credentials.password.length < 8) {
+        return $scope.error = true;
+      }
       $scope.startLoading();
-      // TODO: add minimum password validation
-
       Auth.login(credentials)
-        .then(function () {
-          // Logged in, redirect to dashboard
+        .then(function (account) {
           $scope.stopLoading();
-          $location.path('/dashboard');  
+          $location.url('/dashboard');  
         })
         .catch(function (err) {
-          $scope.stopLoading();
-          // TODO: add error handling
+          $scope.handleError(err);
         });
     }
   };

@@ -16,13 +16,17 @@ exports.index = function(req, res) {
     .headers({ 'Accept': 'application/json' })
     .send(data)
     .end(function (response) {
-      console.log(response.code)
-      // TODO: remove magic strings
       if(response.ok) {
         res.json(response.body);
       }
       else {
-        res.send(401);
-      }
+        if(response.error.code === 'ECONNREFUSED') {
+          console.error('Connection to Pifarm API server is not available');
+          return res.send(500);
+        }
+        else {
+          return res.send(401);
+        }
+      }      
     });
 };

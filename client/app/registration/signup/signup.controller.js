@@ -6,11 +6,7 @@ function ($scope, $log, $location, $http, $window, Auth, Inspector) {
 
   $window.document.title = 'Sign Up | Pifarm';
 
-  $scope.account = {
-    fullName: 'Peter Griffin',
-    email: 'peter@test.test',
-    password: 'testishe'
-  };
+  $scope.account = {};
   $scope.loading = false;
   $scope.duplicateEmailError = false;
   $scope.serverError = false;

@@ -1,18 +1,8 @@
-.page-signup {
+.page-registration {
   margin-top: 100px;
 }
 
-.signup-logo {
-  background-color: $signup-box-color;
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  margin: -86px 45%;
-  position: absolute;
-}
-
-.signup-header {
+.registration-header {
   color: $supp-grey;
   text-shadow: 1px 1px $supp-grey-lighter;
   width: 440px;
@@ -36,7 +26,7 @@
   }
 }
 
-.signup-box {
+.registration-box {
   display: block;
   margin: 0 auto;
   padding: 30px;
