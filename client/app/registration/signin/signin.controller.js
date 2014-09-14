@@ -1,25 +1,24 @@
 'use strict';
 
 angular.module('pifarm.app')
-.controller('SigninCtrl', function ($scope, $log, $location, $window, Auth, Inspector, Notifier) {
+.controller('SigninCtrl', function ($scope, $log, $location, $window, $stateParams, Auth, Inspector, Notifier) {
 
   $window.document.title = 'Sign In | Pifarm';
 
   $scope.credentials = {
-    username: 'test@test.test',
-    password: 'testishe'
+    username: $stateParams.username || ''
   };
   $scope.loading = false;
   $scope.error = false;
 
   $scope.startLoading = function () {
     $scope.loading = true;
-    $scope.loginButtonText = 'Signing In...';
+    $scope.signinButtonText = 'Signing In...';
   };
 
   $scope.stopLoading = function () {
     $scope.loading = false;
-    $scope.loginButtonText = 'Login';
+    $scope.signinButtonText = 'Sign In';
   };
 
   $scope.resetErrors = function () {
@@ -27,7 +26,6 @@ angular.module('pifarm.app')
   };
 
   $scope.handleError = function (err) {
-    $scope.stopLoading();
     $scope.credentials.password = '';
     if(Inspector.unauthorized(err)) {
       $scope.error = true;
@@ -36,7 +34,7 @@ angular.module('pifarm.app')
       $log.error(err);
       Notifier.serverError();
     }
-  }
+  };
 
   $scope.signin = function (credentials, form) {
     $scope.resetErrors();
@@ -52,6 +50,7 @@ angular.module('pifarm.app')
           $location.url('/dashboard');  
         })
         .catch(function (err) {
+          $scope.stopLoading();
           $scope.handleError(err);
         });
     }

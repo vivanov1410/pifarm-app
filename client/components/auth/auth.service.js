@@ -99,9 +99,9 @@ function ($q, $http, $cookieStore, Restangular, Settings, Accounts) {
      * Waits for currentAccount to resolve before checking if user is logged in
      */
     isLoggedInAsync: function (callback) {
-      if(currentAccount.hasOwnProperty('then')) {
-        currentAccount.then(function (user) {
-          currentAccount = user;
+      if(currentAccount.hasOwnProperty('$object')) {
+        currentAccount.then(function (account) {
+          currentAccount = account;
           callback(true);
         }).catch(function() {
           callback(false);

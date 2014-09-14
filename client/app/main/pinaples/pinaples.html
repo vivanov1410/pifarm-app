@@ -1,0 +1,36 @@
+<div class="page-header">
+  <h1>Pinaples</h1>
+  <a href="pinaples/create" class="btn btn-success btn-lg">Create Pinaple</a>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-repeat="pinaple in pinaples">
+    <div class="panel panel-default margin-top-10">
+
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-offset-1 col-xs-9 text-center">
+            <h3 class="panel-title"><a ng-href="pinaples/{{pinaple.id}}/overview">{{pinaple.name}}</a></h3>
+          </div>
+          <div class="col-xs-2 text-center">
+            <a ng-href="#/pinaples/{{pinaple.id}}/settings" class="link-style"><i class="fa fa-cog"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-body padding-20">
+        <div class="row">
+          <div class="col-xs-4">
+            <img src="assets/images/pinaple.jpg" alt="" class="img-rounded">
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-group btn-group-justified">
+        <a ng-href="#/pinaples/{{pinaple.id}}/dashboard" class="btn btn-default"><i class="fa fa-tachometer"></i>&nbsp; Dashboard</a>
+        <a ng-href="#/pinaples/{{pinaple.id}}/data" class="btn btn-default"><i class="fa fa-bar-chart-o"></i>&nbsp; Data</a>
+        <a ng-href="#/pinaples/{{pinaple.id}}/slices" class="btn btn-default"><i class="fa fa-puzzle-piece"></i>&nbsp; Slices</a>
+      </div>
+    </div>
+  </div>
+</div>

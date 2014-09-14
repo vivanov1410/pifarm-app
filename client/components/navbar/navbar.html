@@ -1,18 +1,36 @@
-<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarCtrl">
+<div class="navbar navbar-default" ng-controller="NavbarCtrl">
   <div class="container">
     <div class="navbar-header">
-      <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
+      <button class="navbar-toggle" type="button" ng-click="collapsed = !collapsed">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand">pifarm-app</a>
+      <a href="/" class="navbar-brand">Pifarm</a>
     </div>
-    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+    <div collapse="collapsed" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
             <a ng-href="{{item.link}}">{{item.title}}</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        <li class="dropdown dropdown-user">
+          <a href="" class="dropdown-toggle">
+          <span class="username username-hide-on-mobile">{{getCurrentAccount().fullName}}</span>
+          <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/mypifarm">My Pifarm</a>
+            </li>
+            <li class="divider">
+            </li>
+            <li>
+              <a href="" ng-click="logout()">Sign Out</a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
