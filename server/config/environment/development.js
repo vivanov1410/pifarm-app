@@ -4,7 +4,7 @@
 // ==================================
 var api = {
   protocol: 'http',
-  hostname: 'localhost:54627',
+  hostname: 'localhost:3000',
   version: 'v1'
 };
 

@@ -6,7 +6,7 @@ var config = require('../../config/environment');
 exports.index = function (req, res) {
   // TODO: add validation
   var data = {
-    fullName: req.body.fullName,
+    fullname: req.body.fullname,
     email: req.body.email,
     password: req.body.password
   };

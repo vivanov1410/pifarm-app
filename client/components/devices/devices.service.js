@@ -25,6 +25,14 @@ angular.module('pifarm.app')
 
     remove: function (device) {
       return Restangular.one(route, device.id).remove();
+    },
+
+    getLatestStats: function (device) {
+      return device.one('stats/latest').get();
+    },
+
+    getStatsByDate: function (device, start, end) {
+      return device.one('stats?start=' + start + '&end=' + end).getList();
     }
 
   };

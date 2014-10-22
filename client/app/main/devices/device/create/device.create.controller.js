@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('pifarm.app')
-.controller('CreateDeviceCtrl', function ($scope, $log, $window, $location, Devices, DevicesData, Inspector) {
+.controller('CreateDeviceCtrl', function ($scope, $log, $window, $location, Devices, DevicesData, Inspector, Notifier) {
 
   $window.document.title = 'Create Device | Pifarm';
 
@@ -42,11 +42,11 @@ angular.module('pifarm.app')
       Devices.create(device)
         .then(function (device) {
           $scope.stopLoading();
-          $location.url('devices/' + device.id);
+          $location.url('devices/' + device.id + '/dashboard');
         })
-        .catch(function (error, status) {
+        .catch(function (error) {
           $scope.stopLoading();
-          $scope.handleError();
+          $scope.handleError(error);
         });
     }
   };

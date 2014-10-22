@@ -60,7 +60,7 @@ function ($q, $http, $cookieStore, Restangular, Settings, Accounts) {
       var callback = callback || angular.noop;
       var deferred = $q.defer();
       $http.post('/api/signup', {
-        fullName: account.fullName,
+        fullname: account.fullname,
         email: account.email,
         password: account.password
       })

@@ -10,10 +10,10 @@
 
     <div class="registration-box">
       <form name="form" role="form" ng-submit="signup(account, form)">
-        <div class="form-group" ng-class="{'has-error': form.fullName.$invalid && form.fullName.$dirty}">
-          <input type="text" name="fullName" class="form-control input-lg" placeholder="Full name" ng-model="account.fullName" required ng-minlength="4" ng-maxlength="64" autofocus>
-          <span class="help-block" ng-if="form.fullName.$error.minlength">Name is too short.</span>
-          <span class="help-block" ng-if="form.fullName.$error.maxlength">Name is too long.</span>
+        <div class="form-group" ng-class="{'has-error': form.fullname.$invalid && form.fullname.$dirty}">
+          <input type="text" name="fullname" class="form-control input-lg" placeholder="Full name" ng-model="account.fullname" required ng-minlength="4" ng-maxlength="64" autofocus>
+          <span class="help-block" ng-if="form.fullname.$error.minlength">Name is too short.</span>
+          <span class="help-block" ng-if="form.fullname.$error.maxlength">Name is too long.</span>
         </div>
 
         <div class="form-group" ng-class="{'has-error': form.email.$invalid && form.email.$dirty || duplicateEmailError}">

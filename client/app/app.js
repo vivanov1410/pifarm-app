@@ -9,7 +9,9 @@ angular.module('pifarm.app', [
   'ui.router',
   'ui.bootstrap',
   'restangular',
-  'growlNotifications'
+  'growlNotifications',
+  'chartjs',
+  'angularMoment'
 ])
 .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
   
@@ -21,9 +23,6 @@ angular.module('pifarm.app', [
 
   // Configuring Restangular
   Restangular.setBaseUrl(Settings.apiUrl);
-  Restangular.setRestangularFields({
-    selfLink: 'uri'
-  });
 
   Restangular.addFullRequestInterceptor(function (headers) {
     var token = $cookieStore.get(Settings.tokenName)
@@ -31,7 +30,7 @@ angular.module('pifarm.app', [
       headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=UTF-8',
-        'X-Pifarm-Session': token
+        'Authorization': 'Bearer ' + token
       }
     }
     return { headers: headers };
@@ -40,6 +39,12 @@ angular.module('pifarm.app', [
   Restangular.addResponseInterceptor(function (response, operation) {
     if(operation === 'getList') {
       var modifiedResponse = response.data;
+
+      _.each(modifiedResponse, function (record) {
+        if(record.createdAt) record.createdAt = moment(record.createdAt);
+        if(record.updatedAt) record.updatedAt = moment(record.updatedAt);
+        if(record.at) record.at = moment(record.at);
+      });
 
       modifiedResponse.metadata = {
         offset: response.offset,

@@ -7,7 +7,7 @@ angular.module('pifarm.app')
 
     types: [
       {
-        key: 'RaspberryPi',
+        key: 'raspberrypi',
         value: 'Raspberry Pi'
       }
     ]

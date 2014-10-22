@@ -1,1 +1,17 @@
-<p ng-if="!device.stats">Your device is not connected to Dashboard</p>
+<p>Id: {{device.id}}</p>
+<p>Name: {{device.name}}</p>
+<p>Serial Number: {{device.serialNumber}}</p>
+
+<p ng-if="!stats">Your device is not connected to Dashboard</p>
+
+<div ng-if="stats">
+  <p>Uptime: {{stats.uptime}}</p>
+  <p>Available Memory: {{stats.memory.available | bytes}}</p>
+  <p>Available HDD: {{stats.hdd.available | bytes}}</p>
+  <p>Current CPU temperature: {{stats.temperature.cpu}} C</p>
+  <p>Current GPU temperature: {{stats.temperature.gpu}} C</p>
+</div>
+
+<div style="width: 600px; height: 600px;">
+  <cjs-line dataset="temperatures" options="someOptions" segement-stroke-width="5" responsive="true"></cjs-line>
+</div>

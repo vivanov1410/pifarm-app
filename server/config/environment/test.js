@@ -4,7 +4,7 @@
 // ===========================
 var api = {
   protocol: 'http',
-  hostname: 'pifarm.apphb.com',
+  hostname: 'pifarm-api.herokuapp.com',
   version: 'v1'
 };
 
